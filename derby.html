@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://quadjr.github.io/aframe-gaussian-splatting/index.js"></script>
+  </head>
+  <body>
+    <a-scene renderer="antialias: false;" stats>
+      <a-entity camera position="0 0 0" rotation="0 0 0" wasd-controls="fly:True" look-controls></a-entity>
+      <a-entity gaussian_splatting="src: https://huggingface.co/datasets/Soaptrader/splats/resolve/main/point_cloud.splat;depthWrite:true;discardFilter:0.1" rotation="0 0 0" position="0 0 0">
+      </a-entity>
+      <a-entity obj-model="obj: https://huggingface.co/datasets/Soaptrader/splats/resolve/main/derby.obj" move position="5.8 -4 3.6" scale="1 1 1" rotation="0 142 5">
+      </a-entity>
+      <a-sky color="#000"></a-sky>
+    </a-scene>
+  </body>
+</html>
